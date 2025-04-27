@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Registration</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="Registration.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="formContainer">
+
+    <h1 class="heading">Registration Form</h1>
+
+    <form>
+
+      <div class="formItems">
+
+        <div class="item">
+          <label>First name:
+            <input type="text" name="FirstName" placeholder="Your first name" minlength="2" pattern="[A-za-z]+"
+              title="Letters only" required>
+          </label>
+        </div>
+
+        <div class="item">
+          <label>Last name:
+            <input type="text" name="LastName" placeholder="Your last name" minlength="2" pattern="[A-za-z]+"
+              title="Letters only" required>
+          </label>
+        </div>
+
+        <div class="item">
+          <label>Password:
+            <input type="password" name="password" placeholder="Your password" minlength="6" required>
+          </label>
+        </div>
+
+        <div class="item">
+          <label>Confirm password:
+            <input type="password" name="confirmPassword" placeholder="Confirm password" minlength="6" required>
+          </label>
+        </div>
+
+        <div class="item">
+          <label>Email:
+            <input type="email" name="email" placeholder="Your email" required>
+          </label>
+        </div>
+
+        <div class="item">
+          <label>Your birthday:
+            <input type="date" name="birthday" required>
+          </label>
+        </div>
+
+        <div class="formBottom">
+
+          <div class="item">
+            <label class="genderQuestion">Your gender:
+              <select class="Gender">
+                <option name="Gender" value="Male">Male</option>
+                <option name="Gender" value="Female">Female</option>
+                <option name="Gender" value="PreferNotToTell">Prefer not to tell</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="item">
+            <div class="Consent">
+              <label class="consentQuestion">Do you agree to send cookies to me?</label>
+
+              <div class="itemConsent">
+                <label for>No</label>
+                <input type="radio" name="consentAnswer" value="No">
+
+                <label>Yes</label>
+                <input type="radio" name="consentAnswer" value="Yes">
+              </div>
+            </div>
+          </div>
+
+          <div class="formButtons">
+
+            <div class="SubmitButton">
+              <button type="submit">Submit</button>
+            </div>
+
+            <div class="ResetButton">
+              <button type="reset">Reset</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
