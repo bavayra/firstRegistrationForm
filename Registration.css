@@ -139,7 +139,7 @@ form {
           input[type="email"],
           input[type="password"]) {
           background-color: rgb(214, 198, 235);
-          cursor: text;  /*reorganized a bit, cursors added/changed*/ 
+          cursor: text;  
         }
 
         .formContainer :is(input[type="date"],
@@ -246,11 +246,15 @@ form {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
   }
 
-  .submitButton button:hover,
-  .resetButton button:hover {
+   button:hover {
     background-color:  #a391ec;
     color: var(--secondary-color);
     cursor: pointer;
-  } /*hovers added*/
+  } 
+
+  button:active {
+    transform: scale(0.92); 
+  }
