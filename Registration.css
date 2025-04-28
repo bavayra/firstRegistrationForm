@@ -17,8 +17,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /*used variables insted of direct colors*/
-  overflow-x: hidden;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
 }
 
 form {
@@ -124,7 +123,7 @@ form {
         outline: none;
         border: 1px solid rgb(187, 170, 209);
         border-radius: 3px;
-        margin-top: 5px; /*added margins*/
+        margin-top: 5px; 
       }
 
         input::placeholder {
@@ -137,13 +136,17 @@ form {
         }
 
         .formContainer :is(input[type="text"],
-          input[type="password"],
           input[type="email"],
-          input[type="date"],
+          input[type="password"]) {
+          background-color: rgb(214, 198, 235);
+          cursor: text;  /*reorganized a bit, cursors added/changed*/ 
+        }
+
+        .formContainer :is(input[type="date"],
           input[type="radio"],
           select) {
           background-color: rgb(214, 198, 235);
-          cursor: pointer;
+          cursor: pointer; 
         }
 
         input[type="radio"] {
@@ -224,8 +227,8 @@ form {
         padding: 0 20px;
         gap: 10px;
       }
-      .SubmitButton,
-      .ResetButton {
+      .submitButton,
+      .resetButton {
         width: auto;
       }
     }
@@ -244,3 +247,10 @@ form {
     cursor: pointer;
     font-weight: bold;
   }
+
+  .submitButton button:hover,
+  .resetButton button:hover {
+    background-color:  #a391ec;
+    color: var(--secondary-color);
+    cursor: pointer;
+  } /*hovers added*/
