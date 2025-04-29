@@ -22,17 +22,12 @@
     <form>
 
       <div class="formItems">
+     
+      
 
         <div class="item">
           <label>First name:
             <input type="text" name="FirstName" placeholder="Your first name" minlength="2" pattern="[A-za-z]+"
-              title="Letters only" required>
-          </label>
-        </div>
-
-        <div class="item">
-          <label>Last name:
-            <input type="text" name="LastName" placeholder="Your last name" minlength="2" pattern="[A-za-z]+"
               title="Letters only" required>
           </label>
         </div>
@@ -44,22 +39,37 @@
         </div>
 
         <div class="item">
+          <label>Email:
+            <input type="email" name="email" placeholder="Your email" required>
+          </label>
+        </div>
+   
+
+     
+
+        <div class="item">
+          <label>Last name:
+            <input type="text" name="LastName" placeholder="Your last name" minlength="2" pattern="[A-za-z]+"
+              title="Letters only" required>
+          </label>
+        </div>
+
+    
+
+        <div class="item">
           <label>Confirm password:
             <input type="password" name="confirmPassword" placeholder="Confirm password" minlength="6" required>
           </label>
         </div>
 
-        <div class="item">
-          <label>Email:
-            <input type="email" name="email" placeholder="Your email" required>
-          </label>
-        </div>
-
+     
         <div class="item">
           <label>Your birthday:
             <input type="date" name="birthday" required>
           </label>
         </div>
+        </div>
+    
 
         <div class="formBottom">
 
@@ -97,7 +107,8 @@
             </div>
           </div>
         </div>
-      </div>
+      
+     
     </form>
   </div>
 </body>
