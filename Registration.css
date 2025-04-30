@@ -223,9 +223,22 @@ body {
     transform: scale(0.92); 
   }
 
+  @media (max-width:620px){
+    .formGrid {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+    }
+    form {
+      padding-block: 1.7rem;
+      font-size: 0.8rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+   
+  }
 
 
 /*this project will be built with media queries. I know that clamp exists, I just wanted to start with basics and then evolve into something better  */
 
 
-/*DONE: got rid of pixels for rems' sake*/
