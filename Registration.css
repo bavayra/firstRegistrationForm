@@ -16,7 +16,7 @@ html {
 
 body {
   margin: 0;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,8 +26,8 @@ body {
    form {
         width: min(100vw, 600px);
         padding: 1rem;
-        min-height: 70vh;
-        overflow: hidden;
+        min-height: 70svh;
+        overflow-y: auto;
         border: 1px solid;
         border-radius: 2rem;
         z-index: 0;
@@ -234,8 +234,7 @@ body {
     }
     h1 {
       font-size: 1.5rem;
-    }
-   
+    } 
   }
 
 
