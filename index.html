@@ -16,15 +16,18 @@
 
 <body>
   <main>
-  <form>
+    <form>
 
-    <h1 >Registration Form</h1>
-    <div class="formGrid">
+    <h1 >Registration Form</h1> <!--I know, that h1 would be better inside <heading>, but logically it belongs to the form itself-->
+
+      <div class="formGrid">
+
         <div class="item">
           <label>First name:
             <input type="text" name="FirstName" placeholder="Your first name" minlength="2" pattern="[A-za-z]+"
-              title="Letters only" required>
+              aria-describedby="firstNameNote" required>
           </label>
+          <small id="firstNameNote" class="sr-only">Letters only</small>
         </div>
 
         <div class="item">
@@ -42,8 +45,9 @@
         <div class="item">
           <label>Last name:
             <input type="text" name="LastName" placeholder="Your last name" minlength="2" pattern="[A-za-z]+"
-              title="Letters only" required>
+            aria-describedby="lastNameNote" required>
           </label>
+          <small id="lastNameNote" class="sr-only">Letters only</small>
         </div>
 
         <div class="item">
@@ -59,10 +63,10 @@
           </label>
         </div>
         
-        </div>
+      </div>
     
 
-        <div class="formBottom">
+      <div class="formBottom">
 
           <div class="item">
             <label class="genderQuestion">Your gender:
@@ -101,11 +105,11 @@
               <button type="reset">Reset</button>
             </div>
           </div>
-        </div>
+      </div>
       
-     
     </form>
-    </main>
+  </main>
+  <!--No footer because it's a simple registration form where the footer is not needed (ig)-->
 </body>
 
 </html>
