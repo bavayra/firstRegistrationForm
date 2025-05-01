@@ -1,5 +1,6 @@
 html {
   font-size: 16px;
+  min-height: 100svh;
 }
 
 * {
@@ -26,21 +27,21 @@ body {
    form {
         width: min(100vw, 600px);
         padding: 1rem;
-        min-height: 70svh;
-        overflow-y: auto;
+        min-height: 100%;
         border: 1px solid;
         border-radius: 2rem;
         z-index: 0;
         background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin: auto;    
-    padding-block: 5rem;
-    padding-inline: 3.5rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: auto;    
+        padding-block: 5rem;
+        padding-inline: 3.5rem;
+        overflow:hidden;
       }
 
        form::before {
@@ -104,7 +105,6 @@ body {
     .item {
       width: 100%;
       margin-bottom: 1rem;
-     
     }
 
       .item label {
@@ -113,7 +113,7 @@ body {
       }
 
       .item input {
-        height: 1.5rem;
+        min-height: 1.5rem;
         width: 100%;
         outline: none;
         border: 1px solid rgb(187, 170, 209);
@@ -150,7 +150,6 @@ body {
           transform-origin: center;
           accent-color: #977dff;
           vertical-align: middle;
-          
         }
 
   .gender,
@@ -223,7 +222,7 @@ body {
     transform: scale(0.92); 
   }
 
-  @media (max-width:620px){
+  @media (max-width:480px){
     .formGrid {
       grid-template-columns: 1fr;
       gap: 0.4rem;
@@ -237,7 +236,68 @@ body {
     } 
   }
 
+@media (orientation: landscape) and (max-width:1024px){
+  form {
+    padding-block: 2rem;
+  }
+  .formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+  h1 {
+    font-size: 1.7rem;
+  }
+}
 
-/*this project will be built with media queries. I know that clamp exists, I just wanted to start with basics and then evolve into something better  */
+@media (orientation: landscape) and (max-width:895px){
+h1 {
+  font-size: 1.2rem;
+}
+form {
+  padding-block: 1.3rem;
+}
+
+.consentQuestion,
+.radioOption,
+label {
+  font-size: 0.8rem;
+}
+.formBottom{
+  margin-top: -1.3rem;
+}
+.formButtons {
+  margin-top: -0.6rem;
+}
+button {
+  font-size: 0.75rem;
+  padding-block: 0.3rem;
+  padding-inline: 0.5rem;
+}
+}
+
+@media (orientation: landscape) and (max-width:845px){
+  h1{
+    font-size: 1.4rem;
+  }
+
+  .formBottom{
+    margin-top: -1.3rem;
+  }
+
+  .consentQuestion,
+  .radioOption,
+  label {
+    font-size: 0.9rem;
+  }
+
+  .formButtons {
+    margin-top: -0.5rem;
+  }
+}
+
+/*COMMENT: this project is built with media queries. I know that clamp exists, I just wanted to start with basics and then evolve into something better  */
+
+
+
 
 
