@@ -1,6 +1,12 @@
 html {
   font-size: 16px;
+}
+
+html,
+body {
+  min-height: 100vh; /*Here it has 2 values because FireFox browser went crazy*/
   min-height: 100svh;
+  overflow-x: hidden;
 }
 
 * {
@@ -17,7 +23,6 @@ html {
 
 body {
   margin: 0;
-  min-height: 100svh;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
 }
 
@@ -29,8 +34,8 @@ form {
   align-items: center;
 }
    form {
-        width: min(100vw, 600px);
-        padding: 1rem;
+        width: min(90%, 600px);
+        padding: 0 1rem;
         min-height: 100%;
         border: 1px solid;
         border-radius: 2rem;
@@ -38,10 +43,11 @@ form {
         background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
         position: relative;
         gap: 1rem;
-        margin: auto;    
+        margin: 0 auto;    
         padding-block: 5rem;
         padding-inline: 3.5rem;
-        overflow:hidden;
+        overflow: hidden;
+        box-sizing: border-box;
       }
 
        form::before {
@@ -51,7 +57,7 @@ form {
         left: -2px;
         bottom: -2px;
         right: -2px;
-        padding: 0.3rem;
+        padding: .3rem;
         background: linear-gradient(45deg,
             #b8ade4,
             #a391ec,
@@ -118,13 +124,13 @@ form {
         outline: none;
         border: 1px solid rgb(187, 170, 209);
         border-radius: 3px;
-        margin-top: 0.3rem; 
+        margin-top: .3rem; 
         box-sizing: border-box;
       }
 
         input::placeholder {
-          font-size: 0.75rem;
-          padding: 0.5rem;
+          font-size: .75rem;
+          padding: .5rem;
         }
 
         input[placeholder]:invalid:not(:placeholder-shown),
@@ -222,7 +228,7 @@ form {
     width: 100%;
     max-width: 200px;
     margin: 0 auto;
-    padding: 0.3rem 1.5rem;
+    padding: .3rem 1.5rem;
     text-align: center;
     background-color: #30237c;
     color: rgb(214, 198, 235);
@@ -230,7 +236,7 @@ form {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    transition: transform .1s ease, box-shadow .1s ease;
   }
 
    button:hover {
@@ -240,7 +246,7 @@ form {
   } 
 
   button:active {
-    transform: scale(0.92); 
+    transform: scale(.95); 
   }
 
 @media (orientation: landscape) and (max-width:1024px){
@@ -266,18 +272,18 @@ form {
 .consentQuestion,
 .radioOption,
 label {
-  font-size: 0.8rem;
+  font-size: .8rem;
 }
 .formBottom{
   margin-top: -1.3rem;
 }
 .formButtons {
-  margin-top: -0.6rem;
+  margin-top: -.6rem;
 }
 button {
-  font-size: 0.75rem;
-  padding-block: 0.3rem;
-  padding-inline: 0.5rem;
+  font-size: .75rem;
+  padding-block: .3rem;
+  padding-inline: .5rem;
 }
 }
 
@@ -291,36 +297,35 @@ button {
   .consentQuestion,
   .radioOption,
   label {
-    font-size: 0.9rem;
+    font-size: .9rem;
   }
   .formButtons {
-    margin-top: -0.5rem;
+    margin-top: -.5rem;
   }
 }
 
 @media (max-width:480px){
   .formGrid {
     grid-template-columns: 1fr;
-    gap: 0.4rem;
+    gap: .4rem;
   }
   form {
     padding-block: 1.7rem;
-    font-size: 0.8rem;
+    font-size: .8rem;
   }
   h1 {
     font-size: 1.5rem;
   } 
 }
 
+
 /*COMMENT: this project is built with media queries. I know that clamp exists, I just wanted to start with basics and then evolve into something better  */
 
 /*TODO*/
-/*Валидация: Добавь базовую валидацию с помощью атрибутов required, minlength, maxlength и т.д., чтобы улучшить пользовательский опыт.*/
-/*Доступность: Изучи основы доступности (a11y), чтобы сделать форму удобной для всех пользователей.*/
-/*Кроссбраузерность*/
-/*Залипание кнопки на телефоне*/
-/*Форма двигается пальцем на телефоне*/
-/*Перепроверить адаптивность*/
+
+/*CROSSBROWSER : with Chrome and Opera GX it's fine, with Firefox it has scrolls. Also check how does it look with mobiles*/
+
+
 
 
 
