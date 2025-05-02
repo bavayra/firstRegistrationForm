@@ -18,13 +18,16 @@ html {
 body {
   margin: 0;
   min-height: 100svh;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
+}
+
+body, 
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
 }
-
    form {
         width: min(100vw, 600px);
         padding: 1rem;
@@ -34,10 +37,6 @@ body {
         z-index: 0;
         background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
         position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         gap: 1rem;
         margin: auto;    
         padding-block: 5rem;
@@ -304,6 +303,16 @@ button {
 }
 
 /*COMMENT: this project is built with media queries. I know that clamp exists, I just wanted to start with basics and then evolve into something better  */
+
+/*TODO*/
+/* DONE Атрибут action: Хотя ты, возможно, еще не добавляла обработку формы, стоит указать атрибут action в теге <form>, даже если он пока пустой или указывает на заглушку.*/
+/*DONE Организация стилей: Рассмотри возможность группировки связанных стилей вместе и добавления комментариев для улучшения читаемости.*/
+/*Валидация: Добавь базовую валидацию с помощью атрибутов required, minlength, maxlength и т.д., чтобы улучшить пользовательский опыт.*/
+/*Доступность: Изучи основы доступности (a11y), чтобы сделать форму удобной для всех пользователей.*/
+/*Кроссбраузерность*/
+/*Залипание кнопки на телефоне*/
+/*Форма двигается пальцем на телефоне*/
+/*Перепроверить адаптивность*/
 
 
 
