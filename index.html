@@ -24,30 +24,24 @@
 
         <div class="item">
           <label>First name:
-            <input type="text" name="FirstName" placeholder="Your first name" minlength="2" pattern="[A-za-z]+"
-              aria-describedby="firstNameNote" required>
+            <input type="text" name="FirstName" placeholder="Your first name" pattern="[A-za-z]{2,}"
+              aria-describedby="firstNameNote" autocomplete="given-name" required>
           </label>
           <small id="firstNameNote" class="sr-only">Letters only</small>
         </div>
 
         <div class="item">
-          <label>Password:
-            <input type="password" name="password" placeholder="Your password" minlength="6" required>
-          </label>
-        </div>
-
-        <div class="item">
-          <label>Email:
-            <input type="email" name="email" placeholder="Your email" required>
-          </label>
-        </div>
-
-        <div class="item">
           <label>Last name:
-            <input type="text" name="LastName" placeholder="Your last name" minlength="2" pattern="[A-za-z]+"
-            aria-describedby="lastNameNote" required>
+            <input type="text" name="LastName" placeholder="Your last name" pattern="[A-za-z]{2,}"
+            aria-describedby="lastNameNote" autocomplete="family-name" required>
           </label>
           <small id="lastNameNote" class="sr-only">Letters only</small>
+        </div>
+
+        <div class="item">
+          <label>Password:
+            <input type="password" name="password" placeholder="Your password" minlength="6" autocomplete="current-password" required>
+          </label>
         </div>
 
         <div class="item">
@@ -56,10 +50,15 @@
           </label>
         </div>
 
-     
+        <div class="item">
+          <label>Email:
+            <input type="email" name="email" placeholder="Your email" maxlength="254" autocomplete="email" required>
+          </label>
+        </div> 
+
         <div class="item">
           <label>Your birthday:
-            <input type="date" name="birthday" required>
+            <input type="date" name="birthday" min="1925-01-01" required>
           </label>
         </div>
         
@@ -70,7 +69,8 @@
 
           <div class="item">
             <label class="genderQuestion">Your gender:
-              <select class="gender">
+              <select class="gender" required>
+                <option value="" disabled selected hidden>Choose your gender</option>
                 <option name="gender" value="Male">Male</option>
                 <option name="gender" value="Female">Female</option>
                 <option name="gender" value="PreferNotToTell">Prefer not to tell</option>
