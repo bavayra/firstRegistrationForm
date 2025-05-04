@@ -19,6 +19,7 @@ body {
 :root {
   --primary-color:#977DFF;
   --secondary-color: #00033D;
+  --tertiary-color: #30237c;
 }
 
 body {
@@ -230,8 +231,8 @@ form {
     margin: 0 auto;
     padding: .3rem 1.5rem;
     text-align: center;
-    background-color: #30237c;
-    color: rgb(214, 198, 235);
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -239,10 +240,19 @@ form {
     transition: transform .1s ease, box-shadow .1s ease;
   }
 
+  button[type="reset"] {
+    background-color: transparent;
+    background: none;
+    border: 2px solid var(--tertiary-color);
+    padding: .2rem 1.6rem;
+    color: var(--tertiary-color);
+  }
+
    button:hover {
-    background-color:  #a391ec;
-    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
     cursor: pointer;
+    border: none;
   } 
 
   button:active {
@@ -321,9 +331,7 @@ button {
 
 /*COMMENT: this project is built with media queries. I know that clamp exists, I just wanted to start with basics and then evolve into something better  */
 
-/*TODO*/
 
-/*CROSSBROWSER : with Chrome and Opera GX it's fine, with Firefox it has scrolls. Also check how does it look with mobiles*/
 
 
 
